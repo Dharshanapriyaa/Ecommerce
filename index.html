@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinkBoutique | Premium Pink E-commerce</title>
+    <meta name="description" content="Discover premium pink-themed products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gem"></i> PinkBoutique
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#products">Shop</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <i class="fa-solid fa-search"></i>
+        </div>
+        <div class="nav-icons">
+            <div class="icon-container" id="wishlist-icon">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge" id="wishlist-count">0</span>
+            </div>
+            <div class="icon-container" id="cart-icon">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Think <span class="highlight">Pink</span>. Shop Premium.</h1>
+            <p>Elevate your style with our exclusive collection of pink aesthetics.</p>
+            <a href="#products" class="btn btn-primary">Shop Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <h2>Trending Collection</h2>
+                <p>Handpicked pink favorites just for you.</p>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be injected here via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PinkBoutique. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="sidebar" id="cart-sidebar">
+        <div class="sidebar-header">
+            <h3>Your Cart</h3>
+            <button class="close-btn" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="sidebar-content" id="cart-items">
+            <!-- Cart items will be listed here -->
+        </div>
+        <div class="sidebar-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-primary full-width" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="sidebar" id="wishlist-sidebar">
+        <div class="sidebar-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-btn" id="close-wishlist"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="sidebar-content" id="wishlist-items">
+            <!-- Wishlist items will be listed here -->
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
